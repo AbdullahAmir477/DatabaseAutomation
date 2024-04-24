@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.13 on win32)" generated="2024-04-24T11:35:50.770907" rpa="false" schemaversion="5">
+<suite id="s1" name="Database" source="C:\Users\AbdullahAmir\Documents\Databse\DatabaseProject\database.robot">
+<test id="s1-t1" name="Connect to SQL Server Database with Windows Authentication" line="23">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-24T11:35:50.943122" level="TRACE">Arguments: [ 'DRIVER={SQL Server};SERVER=BSS-PC110;DATABASE=RobotDatabase;Trusted_Connection=yes;' ]</msg>
+<msg time="2024-04-24T11:35:50.943122" level="TRACE">Return: 'DRIVER={SQL Server};SERVER=BSS-PC110;DATABASE=RobotDatabase;Trusted_Connection=yes;'</msg>
+<msg time="2024-04-24T11:35:50.943122" level="INFO">${connection_string} = DRIVER={SQL Server};SERVER=BSS-PC110;DATABASE=RobotDatabase;Trusted_Connection=yes;</msg>
+<var>${connection_string}</var>
+<arg>DRIVER={SQL Server};SERVER=${DBHost};DATABASE=${DBName};Trusted_Connection=yes;</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-24T11:35:50.943122" elapsed="0.000000"/>
+</kw>
+<kw name="Connect To Database Using Custom Params" owner="DatabaseLibrary">
+<msg time="2024-04-24T11:35:50.944036" level="TRACE">Arguments: [ 'pyodbc' | 'RobotDatabase' | 'DRIVER={SQL Server};SERVER=BSS-PC110;DATABASE=RobotDatabase;Trusted_Connection=yes;' ]</msg>
+<msg time="2024-04-24T11:35:50.946037" level="INFO">Executing : Connect To Database Using Custom Params : pyodbc.connect(db_api_2.connect(RobotDatabase))</msg>
+<msg time="2024-04-24T11:35:50.946037" level="FAIL">NameError: name 'RobotDatabase' is not defined</msg>
+<msg time="2024-04-24T11:35:50.947125" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\AbdullahAmir\Documents\Databse\DatabaseProject\.venv\lib\site-packages\DatabaseLibrary\connection_manager.py", line 383, in connect_to_database_using_custom_params
+    db_connection = eval(db_connect_string)
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+NameError: name 'RobotDatabase' is not defined</msg>
+<arg>pyodbc</arg>
+<arg>RobotDatabase</arg>
+<arg>${connection_string}</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using the map string `db_connect_string`
+(parsed as a list of named arguments).</doc>
+<status status="FAIL" start="2024-04-24T11:35:50.944036" elapsed="0.003089">NameError: name 'RobotDatabase' is not defined</status>
+</kw>
+<kw name="Query" owner="DatabaseLibrary">
+<var>@{query_result}</var>
+<arg>CREATE TABLE students (id INT PRIMARY KEY, name VARCHAR(50), age INT);</arg>
+<doc>Runs a query with the ``selectStatement`` and returns the result as a list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="NOT RUN" start="2024-04-24T11:35:50.947125" elapsed="0.000000"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<arg>${query_result}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="NOT RUN" start="2024-04-24T11:35:50.948047" elapsed="0.000000"/>
+</kw>
+<kw name="Disconnect From Database" owner="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<status status="NOT RUN" start="2024-04-24T11:35:50.948047" elapsed="0.000000"/>
+</kw>
+<doc>Connect to SQL Server database using Windows authentication</doc>
+<tag>default</tag>
+<status status="FAIL" start="2024-04-24T11:35:50.941123" elapsed="0.006924">NameError: name 'RobotDatabase' is not defined</status>
+</test>
+<doc>This is the default settings section</doc>
+<status status="FAIL" start="2024-04-24T11:35:50.772909" elapsed="0.177131"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">default</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Database">Database</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
