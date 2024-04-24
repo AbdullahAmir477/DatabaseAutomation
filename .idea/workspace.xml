@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad36c81a-d833-408b-96be-8b4ff321b087" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/DatabaseProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/RobotProjectPreferences.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/report.html" afterDir="false" />
-    </list>
+    <list default="true" id="ad36c81a-d833-408b-96be-8b4ff321b087" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
