@@ -18,7 +18,7 @@ def create_table():
 
     # Execute query to create table
     query = '''
-        CREATE TABLE parents (
+        CREATE TABLE children (
             id INT PRIMARY KEY,
             name VARCHAR(50),
             age INT
